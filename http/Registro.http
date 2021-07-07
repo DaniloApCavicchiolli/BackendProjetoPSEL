@@ -1,0 +1,45 @@
+//Teste de requisições - Registro
+
+@baseURL = http://localhost:4000
+@id = 60e5b85c52423a0343370f5e
+
+###
+// GET - Lista os registros
+GET {{baseURL}}/registros
+Content-Type: application/json
+
+###
+// GET - Lista um registro pelo id
+GET {{baseURL}}/registros/{{id}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo registro
+POST {{baseURL}}/registros
+Content-Type: application/json
+
+{"nome": "Camila",
+    "status": "inativo",
+    "cpf": "450366788",
+    "email": "camila@gmail.com",
+    "senha": "camila01"
+}
+
+###
+// DELETE - Apaga um registro pelo id
+DELETE  {{baseURL}}/registros/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Alterar registro
+PUT {{baseURL}}/registros
+Content-Type: application/json
+
+{   
+    "_id": "60e5b85c52423a0343370f5e",
+    "nome": "Camila alterado",
+    "status": "inativo",
+    "cpf": "450366788",
+    "email": "camila@gmail.com",
+    "senha": "camila01"
+}
