@@ -27,7 +27,7 @@ router.get('/', async(req, res) => {
 
 /************************************************** 
  * Lista um registro pelo id
- * GET /registros/:id
+ * GET /registros/:id = passando o id, ele intende que é um parâmetro que vai ser passado
 ***************************************************/
 router.get('/:id', async(req, res) => {
     try {

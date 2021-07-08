@@ -1,4 +1,5 @@
 //Teste de requisições - Registro
+//Instalar o plugin REST Client no VS code, para utilizar este recurso.
 
 @baseURL = http://localhost:4000
 @id = 60e5b85c52423a0343370f5e
