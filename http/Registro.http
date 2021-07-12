@@ -2,7 +2,7 @@
 //Instalar o plugin REST Client no VS code, para utilizar este recurso.
 
 @baseURL = http://localhost:4000
-@id = 60e5b85c52423a0343370f5e
+@id = 60ec19b203f2990004e1fbac
 
 ###
 // GET - Lista os registros
@@ -19,11 +19,12 @@ Content-Type: application/json
 POST {{baseURL}}/registros
 Content-Type: application/json
 
-{"nome": "Camila",
-    "status": "inativo",
-    "cpf": "450366788",
-    "email": "camila@gmail.com",
-    "senha": "camila01"
+{   
+    "nome": "Ateste 03",
+    "status": "ativo",
+    "cpf": "89655555555",
+    "email": "ateste03@gmail.com",
+    "senha": "ateste03"
 }
 
 ###
@@ -36,11 +37,11 @@ Content-Type: application/json
 PUT {{baseURL}}/registros
 Content-Type: application/json
 
-{   
-    "_id": "60e5b85c52423a0343370f5e",
-    "nome": "Camila alterado",
-    "status": "inativo",
-    "cpf": "450366788",
-    "email": "camila@gmail.com",
-    "senha": "camila01"
+{
+    "_id": "60ecab8f6d46340cd0dc3775",
+    "nome": "Ateste 03 alterado",
+    "status": "ativo",
+    "cpf": "89655555555",
+    "email": "ateste03@gmail.com",
+    "senha": "ateste03"
 }

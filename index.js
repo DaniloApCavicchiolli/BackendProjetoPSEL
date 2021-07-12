@@ -1,9 +1,9 @@
 const express = require('express')
-//exige esta sintaxe para ler os arquivos de configurações. Carrega as váriaveis de ambiente 
 require('dotenv').config()
 const InicializaMongoServer = require('./config/Db')
-//Definindo as rotas da aplicação
+
 const rotasRegistro = require('./routes/Registro')
+const rotasLogin = require('./routes/Login')
 const rotasUpload = require('./routes/UserImage')
 
 //Inicializamos o servidor MongoDB
@@ -16,23 +16,21 @@ app.disable('x-powered-by')
 
 //Porta Default
 const PORT = process.env.PORT
-app.use(express.json())// verifica se é um conteudo json, se é válido
 
 /* Middleware do Express*/
  // Ficará entre a "requisição" e a "resposta" observando
- // next = É para ele continuar ou não
  app.use(function(req, res, next) {
     // Em produção, remova o * e atualize com o dominio/ip do seu app
-    // * = permite que qualquer origem acesse o meu servidor
-    res.setHeader('Access-Control-Allow-Origin', '*')//Consulta de qualquer origem
-    //Cabeçalhos da requisição que serão permitodos
+    res.setHeader('Access-Control-Allow-Origin', '*')
     //Exemplo: res.setHeader('Access-Control-Allow-Headers', "Content-Type, Accept, access-token")
-    res.setHeader('Access-Control-Allow-Headers', "*")//De qualquer cabeçalho
+    res.setHeader('Access-Control-Allow-Headers', "*")
     //Métodos que serão permitidos
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')//Usando todos os métodos
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
     //Após passar por todos usa o "next()", para ele continuar 
     next()
  })
+
+ app.use(express.json())// verifica se é um conteudo json, se é válido
 
 /* estrutura padrão. Caminho inicial */
 app.get('/', (req, res) => {
@@ -43,6 +41,9 @@ app.get('/', (req, res) => {
 
 /* Rotas do registro */
 app.use('/registros', rotasRegistro)
+
+/* Rotas do login */
+app.use('/login', rotasLogin)
 
 /* Rotas de upload */
 app.use('/userImage', rotasUpload)

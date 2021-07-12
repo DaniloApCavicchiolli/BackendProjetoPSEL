@@ -1,0 +1,12 @@
+
+@baseURL = http://localhost:4000
+
+###
+// POST - Verifica email e senha
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email": "danilo@gmail.com",
+    "senha": "danilo01"
+}
