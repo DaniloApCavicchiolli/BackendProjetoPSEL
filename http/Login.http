@@ -6,7 +6,12 @@
 POST {{baseURL}}/login
 Content-Type: application/json
 
+# {
+#     "email": "camila@gmail.com",
+#     "senha": "camila01"
+# }
+
 {
-    "email": "danilo@gmail.com",
-    "senha": "danilo01"
+    "email": "ateste02@gmail.com",
+    "senha": "ateste02"
 }

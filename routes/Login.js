@@ -6,7 +6,7 @@ router.post('/', async(req, res) => {
     const { email, senha } = req.body
 
     try{
-        const login = await Registro.findOne({email, senha})
+        const login = await Registro.findOne({email, senha,"status":"ativo"})
 
         if(!login) {
             return res.send(401)

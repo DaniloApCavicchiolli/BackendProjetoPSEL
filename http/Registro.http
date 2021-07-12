@@ -20,11 +20,11 @@ POST {{baseURL}}/registros
 Content-Type: application/json
 
 {   
-    "nome": "Ateste 03",
-    "status": "ativo",
-    "cpf": "89655555555",
-    "email": "ateste03@gmail.com",
-    "senha": "ateste03"
+    "nome": "Camila",
+    "status": "inativo",
+    "cpf": "89658596274",
+    "email": "camila@gmail.com",
+    "senha": "camila01"
 }
 
 ###
