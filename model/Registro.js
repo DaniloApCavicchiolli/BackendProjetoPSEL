@@ -29,10 +29,6 @@ const RegistroSchema = mongoose.Schema({
     },
     nivel: {
         type: Number
-    },
-    foto: {
-        originalname: {type: String},
-        path: {type: String}
     }
 }, {timestamps: true})
 

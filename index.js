@@ -4,7 +4,6 @@ const InicializaMongoServer = require('./config/Db')
 
 const rotasRegistro = require('./routes/Registro')
 const rotasLogin = require('./routes/Login')
-const rotasUpload = require('./routes/UserImage')
 
 //Inicializamos o servidor MongoDB
 InicializaMongoServer()
@@ -44,9 +43,6 @@ app.use('/registros', rotasRegistro)
 
 /* Rotas do login */
 app.use('/login', rotasLogin)
-
-/* Rotas de upload */
-app.use('/userImage', rotasUpload)
 
 /* Rota para tratar exceções - normalmente 404 - DEVE SER A ÚLTIMA ROTA (SEMPRE) */
 app.use(function(req, res) {

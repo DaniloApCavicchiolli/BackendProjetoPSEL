@@ -26,10 +26,6 @@ Content-Type: application/json
     "email": "testeimg@gmail.com",
     "senha": "testeimg",
     "nivel": 999,
-    "foto": {
-        "originalname": "naruto.png",
-        "path": "https://imagensemoldes.com.br/wp-content/uploads/2020/05/Naruto-PNG-1024x766.png"
-    }
 }
 
 ###
@@ -50,8 +46,4 @@ Content-Type: application/json
     "email": "testeimg@gmail.com",
     "senha": "testeimg",
     "nivel": 999,
-    "foto": {
-        "originalname": "naruto.png",
-        "path": "uploads/userImage/Naruto-PNG-1024x766.png"
-    }
 }
