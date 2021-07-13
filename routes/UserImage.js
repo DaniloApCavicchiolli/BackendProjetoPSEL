@@ -16,8 +16,8 @@ router.post('/', upload.array('file'), // pega o array que vem do arquivo
                      console.log(`Arquivos recebidos:${req.file.length}`)
                      const statusUpload = req.file.length > 0 ? true : false
                      res.send({
-                         upload: statusUpload, // Retorna um array vazio, em caso de erro
-                         files: req.file //Retorna as informações do arquivo para o usuário: Tamanho, tipo, caminho....
+                         upload: statusUpload, // Retorna o status do upload
+                         files: req.file //Retorna as informações do arquivo 
                      })
                  })
 

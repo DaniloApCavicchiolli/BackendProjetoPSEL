@@ -2,7 +2,7 @@
 //Instalar o plugin REST Client no VS code, para utilizar este recurso.
 
 @baseURL = http://localhost:4000
-@id = 60ec19b203f2990004e1fbac
+@id = 60e4be3bcbb50c7428b72c62
 
 ###
 // GET - Lista os registros
@@ -52,6 +52,6 @@ Content-Type: application/json
     "nivel": 999,
     "foto": {
         "originalname": "naruto.png",
-        "path": "https://imagensemoldes.com.br/wp-content/uploads/2020/05/Naruto-PNG-1024x766.png"
+        "path": "uploads/userImage/Naruto-PNG-1024x766.png"
     }
 }
