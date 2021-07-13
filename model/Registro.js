@@ -24,7 +24,15 @@ const RegistroSchema = mongoose.Schema({
     senha: {
         type: String,
         require: true,
+        unique: true
         //select: false
+    },
+    nivel: {
+        type: Number
+    },
+    foto: {
+        originalname: {type: String},
+        path: {type: String}
     }
 }, {timestamps: true})
 

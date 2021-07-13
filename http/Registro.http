@@ -20,11 +20,16 @@ POST {{baseURL}}/registros
 Content-Type: application/json
 
 {   
-    "nome": "Camila",
+    "nome": "TesteImg",
     "status": "inativo",
-    "cpf": "89658596274",
-    "email": "camila@gmail.com",
-    "senha": "camila01"
+    "cpf": "8965235487955",
+    "email": "testeimg@gmail.com",
+    "senha": "testeimg",
+    "nivel": 999,
+    "foto": {
+        "originalname": "naruto.png",
+        "path": "https://imagensemoldes.com.br/wp-content/uploads/2020/05/Naruto-PNG-1024x766.png"
+    }
 }
 
 ###
@@ -37,11 +42,16 @@ Content-Type: application/json
 PUT {{baseURL}}/registros
 Content-Type: application/json
 
-{
-    "_id": "60ecab8f6d46340cd0dc3775",
-    "nome": "Ateste 03 alterado",
+{   
+    "_id": "60ecdd130057d41314985a7e",
+    "nome": "TesteImg",
     "status": "ativo",
-    "cpf": "89655555555",
-    "email": "ateste03@gmail.com",
-    "senha": "ateste03"
+    "cpf": "8965235487955",
+    "email": "testeimg@gmail.com",
+    "senha": "testeimg",
+    "nivel": 999,
+    "foto": {
+        "originalname": "naruto.png",
+        "path": "https://imagensemoldes.com.br/wp-content/uploads/2020/05/Naruto-PNG-1024x766.png"
+    }
 }
