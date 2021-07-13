@@ -15,6 +15,8 @@ app.disable('x-powered-by')
 
 //Porta Default
 const PORT = process.env.PORT
+// verifica se é um conteudo json, se é válido
+app.use(express.json())
 
 /* Middleware do Express*/
  // Ficará entre a "requisição" e a "resposta" observando
@@ -29,7 +31,7 @@ const PORT = process.env.PORT
     next()
  })
 
- app.use(express.json())// verifica se é um conteudo json, se é válido
+ 
 
 /* estrutura padrão. Caminho inicial */
 app.get('/', (req, res) => {
@@ -44,7 +46,7 @@ app.use('/registros', rotasRegistro)
 /* Rotas do login */
 app.use('/login', rotasLogin)
 
-/* Rota para tratar exceções - normalmente 404 - DEVE SER A ÚLTIMA ROTA (SEMPRE) */
+/* Rota para tratar exceções - normalmente 404 - DEVE SER A ÚLTIMA ROTA "SEMPRE" */
 app.use(function(req, res) {
     res.status(404).json({message: `A rota ${req.originalUrl} não existe.`})
 })
