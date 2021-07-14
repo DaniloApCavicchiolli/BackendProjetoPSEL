@@ -42,16 +42,19 @@ router.post('/', async(req, res) => {
     const { nome } = req.body
     let registro = await Registro.findOne({nome})
     if(registro){
-        return res.status(200).json({
+        return res.status(400).json({
             errors: [{message: "Já existe um registro com o nome informado"}]
         })
     }
     try {
         let registro = new Registro(req.body)
         await registro.save()
+
+        registro.senha = undefined;
+
         res.send(registro)
     } catch (error) {
-        return res.status(500).json({
+        return res.status(400).json({
             errors: [{message: `Erro ao salvar o registro: ${error.message}`}]
         })
     }

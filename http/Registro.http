@@ -2,48 +2,48 @@
 //Instalar o plugin REST Client no VS code, para utilizar este recurso.
 
 @baseURL = http://localhost:4000
-@id = 60ecdd130057d41314985a7e
+@id = 60edf886f178a96e25b94923
 
 ###
 // GET - Lista os registros
-GET {{baseURL}}/registros
+GET {{baseURL}}/auth/registros
 Content-Type: application/json
 
 ###
 // GET - Lista um registro pelo id
-GET {{baseURL}}/registros/{{id}}
+GET {{baseURL}}/auth/registros/{{id}}
 Content-Type: application/json
 
 ###
 // POST - Inclui um novo registro
-POST {{baseURL}}/registros
+POST {{baseURL}}/auth/registros
 Content-Type: application/json
 
 {   
-    "nome": "Danilo",
-    "status": "inativo",
-    "cpf": "846325795",
-    "email": "danilo@gmail.com",
-    "senha": "danilo",
-    "nivel": 999,
+    "nome": "AtivoNovo",
+    "status": "ativo",
+    "cpf": "69825415874",
+    "email": "ativonovo@gmail.com",
+    "senha": "ativonovo",
+    "nivel": 1
 }
 
 ###
 // DELETE - Apaga um registro pelo id
-DELETE  {{baseURL}}/registros/{{id}}
+DELETE  {{baseURL}}/auth/registros/{{id}}
 Content-Type: application/json
 
 ###
 // PUT - Alterar registro
-PUT {{baseURL}}/registros
+PUT {{baseURL}}/auth/registros
 Content-Type: application/json
 
 {   
-    "_id": "60ecdd130057d41314985a7e",
-    "nome": "TesteImg",
     "status": "ativo",
-    "cpf": "8965235487955",
-    "email": "testeimg@gmail.com",
-    "senha": "testeimg",
-    "nivel": 999,
+    "_id": "60eefcec590dd725c178707d",
+    "nome": "TesteCrypt",
+    "cpf": "4596358741",
+    "email": "testecrypt@gmail.com",
+    "senha": "$2a$10$L8D5cVEWY9VHk/rfFjVp5.yvE4PztMwQzN8Fb90x61mlbCUkA3L/C",
+    "nivel": 1,
 }

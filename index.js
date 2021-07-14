@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 /* Rotas do registro */
-app.use('/registros', rotasRegistro)
+app.use('/auth/registros', rotasRegistro)
 
 /* Rotas do login */
 app.use('/login', rotasLogin)
