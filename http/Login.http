@@ -7,6 +7,6 @@ POST {{baseURL}}/login
 Content-Type: application/json
 
 {
-    "email": "ativonovo@gmail.com",
-    "senha": "ativonovo"
+    "email": "novo@gmail.com",
+    "senha": "novo",
 }

@@ -2,40 +2,40 @@
 //Instalar o plugin REST Client no VS code, para utilizar este recurso.
 
 @baseURL = http://localhost:4000
-@id = 60edf886f178a96e25b94923
+@id = 60ef008605f3d931cd93dffe
 
 ###
 // GET - Lista os registros
-GET {{baseURL}}/auth/registros
+GET {{baseURL}}/registros
 Content-Type: application/json
 
 ###
 // GET - Lista um registro pelo id
-GET {{baseURL}}/auth/registros/{{id}}
+GET {{baseURL}}/registros/{{id}}
 Content-Type: application/json
 
 ###
 // POST - Inclui um novo registro
-POST {{baseURL}}/auth/registros
+POST {{baseURL}}/registros
 Content-Type: application/json
 
 {   
-    "nome": "AtivoNovo",
+    "nome": "Novo",
     "status": "ativo",
-    "cpf": "69825415874",
-    "email": "ativonovo@gmail.com",
-    "senha": "ativonovo",
-    "nivel": 1
+    "cpf": "56235987415",
+    "email": "novo@gmail.com",
+    "senha": "novo",
+    "nivel": 0
 }
 
 ###
 // DELETE - Apaga um registro pelo id
-DELETE  {{baseURL}}/auth/registros/{{id}}
+DELETE  {{baseURL}}/registros/{{id}}
 Content-Type: application/json
 
 ###
 // PUT - Alterar registro
-PUT {{baseURL}}/auth/registros
+PUT {{baseURL}}/registros
 Content-Type: application/json
 
 {   

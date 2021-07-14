@@ -7,7 +7,7 @@ router.post('/', async(req, res) => {
     const { email, senha } = req.body
 
     try{
-        const login = await Registro.findOne({ email }).select('+senha');
+        const login = await Registro.findOne({ email }, {'status':'ativo'}).select('+senha');
 
         if(!login) {
             return res.send(400).send({error: 'Email não encontrado'})
@@ -16,6 +16,10 @@ router.post('/', async(req, res) => {
         if(!await bcrypt.compare(senha, login.senha)){
             return res.status(400).send({error: 'Senha inválida'})
         }
+
+        // if(login.nivel === 0){
+        //     return res.status(400).send({error: 'Usuário desativado'})
+        // }
 
         login.senha = undefined
 
