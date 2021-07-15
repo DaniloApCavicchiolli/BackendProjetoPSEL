@@ -4,8 +4,8 @@
 - Nível comum (1) – Tem acesso somente ao seu perfil com a permissão de alterar seus dados.
 - Nível desativado (0) – Não tem acesso a plataforma.
 # Requisitos
-- NodeJs para o backend
-- React Native para o frontend
+- NodeJs com Express para o backend
+- React Native com EXPO para o frontend
 - Banco de dados MongoDB
 # Importante
 - Necessário instalar todas as dependências do projeto.
