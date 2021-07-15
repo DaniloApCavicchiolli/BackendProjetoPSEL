@@ -4,7 +4,8 @@
 - Nível comum (1) – Tem acesso somente ao seu perfil com a permissão de alterar seus dados.
 - Nível desativado (0) – Não tem acesso a plataforma.
 # Requisitos
-- NodeJs e Banco de dados MongoDB 
+- NodeJs para o backend
+- React Native para o frontend
 # Importante
 - Necessário instalar todas as dependências do projeto.
 - A conexão com o banco de dados está sendo feita na pasta config > arquivo Db.js
