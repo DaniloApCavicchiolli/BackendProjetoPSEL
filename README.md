@@ -6,6 +6,7 @@
 # Requisitos
 - NodeJs para o backend
 - React Native para o frontend
+- Banco de dados MongoDB
 # Importante
 - Necessário instalar todas as dependências do projeto.
 - A conexão com o banco de dados está sendo feita na pasta config > arquivo Db.js
